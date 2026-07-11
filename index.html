@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Header -->
@@ -87,33 +87,39 @@
       <div class="services__grid">
         <article class="card" data-reveal>
           <div class="card__icon">🏗️</div>
-          <h3 class="card__title">İnşaat & Yapı</h3>
+          <h3 class="card__title">Deko Tavan</h3>
           <p class="card__text">Konut, villa ve ticari yapılar için projelendirme, kaba ve ince yapı uygulamaları.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('deko-tavan')">Resimleri Gör</button>
         </article>
         <article class="card" data-reveal>
           <div class="card__icon">🛋️</div>
-          <h3 class="card__title">İç Mimari</h3>
+          <h3 class="card__title">Gergi Tavan</h3>
           <p class="card__text">Fonksiyonel ve estetik iç mekan tasarımı, 3D görselleştirme ve konsept geliştirme.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('gergi-tavan')">Resimleri Gör</button>
         </article>
         <article class="card" data-reveal>
           <div class="card__icon">🎨</div>
-          <h3 class="card__title">Dekorasyon</h3>
+          <h3 class="card__title">Gizli Işık & Asma Tavan Modelleri</h3>
           <p class="card__text">Mobilya, aydınlatma, tekstil ve aksesuar seçimiyle mekanınıza karakter katıyoruz.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('gizli-isik')">Resimleri Gör</button>
         </article>
         <article class="card" data-reveal>
           <div class="card__icon">🔨</div>
-          <h3 class="card__title">Tadilat & Renovasyon</h3>
+          <h3 class="card__title">Duvar Paneli</h3>
           <p class="card__text">Ev ve ofislerde komple yenileme, mutfak-banyo tadilatı ve restorasyon işleri.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('duvar-paneli')">Resimleri Gör</button>
         </article>
         <article class="card" data-reveal>
           <div class="card__icon">📐</div>
-          <h3 class="card__title">Proje & Danışmanlık</h3>
+          <h3 class="card__title">Duvar Çıtası</h3>
           <p class="card__text">Mimari proje, ruhsat süreçleri ve bütçe planlamasında uzman danışmanlık.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('duvar-citasi')">Resimleri Gör</button>
         </article>
         <article class="card" data-reveal>
           <div class="card__icon">🌿</div>
-          <h3 class="card__title">Peyzaj & Dış Mekan</h3>
+          <h3 class="card__title">Kartonpier</h3>
           <p class="card__text">Bahçe düzenleme, teras ve dış cephe tasarımıyla yaşam alanını dışarıya taşıyoruz.</p>
+          <button class="btn btn--ghost galeri-btn" onclick="galeriyiAc('kartonpiyer')">Resimleri Gör</button>
         </article>
       </div>
     </div>
@@ -368,16 +374,16 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-<!-- Fotoğraf Galerisi Açılır Penceresi (Modal) -->
-<div id="galleryModal" class="gallery-modal">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content">
-        <h2 id="modalTitle">Hizmet Galerisi</h2>
-        <div id="galleryGrid" class="gallery-grid">
-            <!-- Fotoğraflar JavaScript ile buraya gelecek -->
-        </div>
+  <!-- Galeri Modal (Açılır Pencere) - BURAYA EKLENDİ -->
+  <div id="galeriModal" class="modal-arkaplan">
+    <span class="kapat-btn" onclick="galeriyiKapat()">&times;</span>
+    <div class="modal-icerik">
+      <img id="gosterilenResim" src="" alt="Galeri Resmi">
+      <a class="onceki" onclick="resimDegistir(-1)">&#10094;</a>
+      <a class="sonraki" onclick="resimDegistir(1)">&#10095;</a>
     </div>
-</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,205 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f1014;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Navbar Tasarımı */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(15, 16, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1e2028;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    background-color: #dca76e;
+    color: #0f1014;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.logo-text {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.logo-text strong {
+    color: #dca76e;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #a0a5b5;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #dca76e;
+    padding-bottom: 5px;
+}
+
+.cta-btn {
+    background-color: #dca76e;
+    color: #0f1014;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background-color: #c9935b;
+}
+
+/* Hizmetler Bölümü */
+.services-section {
+    padding: 120px 8% 60px 8%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #15171e;
+    border: 1px solid #222531;
+    border-radius: 16px;
+    padding: 35px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #dca76e;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #a0a5b5;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   YENİ EKLENEN GALERİ MODAL CSS KODLARI
+   ========================================================================== */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(8px);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #15171e;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #222531;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.modal-content h2 {
+    color: #dca76e;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.close-modal {
+    color: #a0a5b5;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #dca76e;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #222531;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    border-color: #dca76e;
+}

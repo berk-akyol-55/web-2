@@ -1,93 +1,373 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akyol Yapı - İnşaat, İç Mimari & Dekorasyon</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akyol Yapı & Dekorasyon — İnşaat, tadilat, iç mimari ve dekorasyon çözümleri. Hayalinizdeki mekanları gerçeğe dönüştürüyoruz." />
+  <title>Akyol Yapı & Dekorasyon | İnşaat ve İç Mimari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Akyol<strong>Yapı</strong></span>
+      </a>
 
-    <!-- Navigasyon Menüsü -->
-    <nav class="navbar">
-        <div class="logo">
-            <span class="logo-box">A</span>
-            <span class="logo-text">Akyol<strong>Yapı</strong></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#ana-sayfa">Ana Sayfa</a></li>
-            <li><a href="#hizmetler" class="active">Hizmetler</a></li>
-            <li><a href="#projeler">Projeler</a></li>
-            <li><a href="#surec">Süreç</a></li>
-            <li><a href="#hakkimizda">Hakkımızda</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Ana Sayfa</a></li>
+          <li><a href="#services" class="nav__link">Hizmetler</a></li>
+          <li><a href="#projects" class="nav__link">Projeler</a></li>
+          <li><a href="#process" class="nav__link">Süreç</a></li>
+          <li><a href="#about" class="nav__link">Hakkımızda</a></li>
+          <li><a href="#contact" class="nav__link">İletişim</a></li>
         </ul>
-        <button class="cta-btn">Teklif Al</button>
-    </nav>
+      </nav>
 
-    <!-- Hizmetler Bölümü -->
-    <section id="hizmetler" class="services-section">
-        <div class="container">
-            <div class="services-grid">
-                
-                <!-- Kart 1: Deko Tavan -->
-                <div class="card" data-category="deko-tavan" style="cursor: pointer;">
-                    <div class="card-icon">🏗️</div>
-                    <h3>Deko Tavan</h3>
-                    <p>Konut, villa ve ticari yapılar için projelendirme, kaba ve ince yapı uygulamaları.</p>
-                </div>
+      <a href="#contact" class="btn btn--primary header__cta">Teklif Al</a>
 
-                <!-- Kart 2: Gergi Tavan -->
-                <div class="card" data-category="gergi-tavan" style="cursor: pointer;">
-                    <div class="card-icon">🛋️</div>
-                    <h3>Gergi Tavan</h3>
-                    <p>Fonksiyonel ve estetik iç mekan tasarımı, 3D görselleştirme ve konsept geliştirme.</p>
-                </div>
-
-                <!-- Kart 3: Gizli Işık & Asma Tavan -->
-                <div class="card" data-category="gizli-isik" style="cursor: pointer;">
-                    <div class="card-icon">🎨</div>
-                    <h3>Gizli Işık & Asma Tavan Modelleri</h3>
-                    <p>Mobilya, aydınlatma, tekstil ve aksesuar seçimiyle mekanınıza karakter katıyoruz.</p>
-                </div>
-
-                <!-- Kart 4: Duvar Paneli -->
-                <div class="card" data-category="duvar-paneli" style="cursor: pointer;">
-                    <div class="card-icon">🔨</div>
-                    <h3>Duvar Paneli</h3>
-                    <p>Ev ve ofislerde komple yenileme, mutfak-banyo tadilatı ve restorasyon işleri.</p>
-                </div>
-
-                <!-- Kart 5: Duvar Çıtası -->
-                <div class="card" data-category="duvar-citasi" style="cursor: pointer;">
-                    <div class="card-icon">📐</div>
-                    <h3>Duvar Çıtası</h3>
-                    <p>Mimari proje, ruhsat süreçleri ve bütçe planlamasında uzman danışmanlık.</p>
-                </div>
-
-                <!-- Kart 6: Kartonpier -->
-                <div class="card" data-category="kartonpier" style="cursor: pointer;">
-                    <div class="card-icon">🌿</div>
-                    <h3>Kartonpier</h3>
-                    <p>Bahçe düzenleme, teras ve dış cephe tasarımıyla yaşam alanını dışarıya taşıyoruz.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Fotoğraf Galerisi Açılır Penceresi (Modal) -->
-    <div id="galleryModal" class="gallery-modal">
-        <span class="close-modal">&times;</span>
-        <div class="modal-content">
-            <h2 id="modalTitle">Hizmet Galerisi</h2>
-            <div id="galleryGrid" class="gallery-grid">
-                <!-- Fotoğraflar JavaScript ile buraya dinamik gelecek -->
-            </div>
-        </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- JavaScript Dosyamız -->
-    <script src="script.js"></script>
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow" data-reveal>İNŞAAT • İÇ MİMARİ • DEKORASYON</p>
+      <h1 class="hero__title" data-reveal>
+        Mekanlarınızı <span>sanata</span> dönüştürüyoruz
+      </h1>
+      <p class="hero__text" data-reveal>
+        Konsept tasarımdan anahtar teslim uygulamaya kadar; modern inşaat,
+        tadilat ve dekorasyon çözümleriyle hayalinizdeki yaşam alanını kuruyoruz.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#projects" class="btn btn--primary">Projelerimizi İncele</a>
+        <a href="#contact" class="btn btn--ghost">Ücretsiz Keşif</a>
+      </div>
+
+      <div class="hero__stats" data-reveal>
+        <div class="stat">
+          <span class="stat__num" data-count="450">0</span><span class="stat__plus">+</span>
+          <p class="stat__label">Tamamlanan Proje</p>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="18">0</span><span class="stat__plus">+</span>
+          <p class="stat__label">Yıllık Tecrübe</p>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="98">0</span><span class="stat__plus">%</span>
+          <p class="stat__label">Memnun Müşteri</p>
+        </div>
+      </div>
+    </div>
+    <a href="#services" class="hero__scroll" aria-label="Aşağı kaydır">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- Services -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Neler Yapıyoruz</p>
+        <h2 class="section__title">Hizmetlerimiz</h2>
+        <p class="section__sub">Yapının temelinden son dekorasyon detayına kadar tek elden çözüm.</p>
+      </div>
+
+      <div class="services__grid">
+        <article class="card" data-reveal>
+          <div class="card__icon">🏗️</div>
+          <h3 class="card__title">İnşaat & Yapı</h3>
+          <p class="card__text">Konut, villa ve ticari yapılar için projelendirme, kaba ve ince yapı uygulamaları.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon">🛋️</div>
+          <h3 class="card__title">İç Mimari</h3>
+          <p class="card__text">Fonksiyonel ve estetik iç mekan tasarımı, 3D görselleştirme ve konsept geliştirme.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon">🎨</div>
+          <h3 class="card__title">Dekorasyon</h3>
+          <p class="card__text">Mobilya, aydınlatma, tekstil ve aksesuar seçimiyle mekanınıza karakter katıyoruz.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon">🔨</div>
+          <h3 class="card__title">Tadilat & Renovasyon</h3>
+          <p class="card__text">Ev ve ofislerde komple yenileme, mutfak-banyo tadilatı ve restorasyon işleri.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon">📐</div>
+          <h3 class="card__title">Proje & Danışmanlık</h3>
+          <p class="card__text">Mimari proje, ruhsat süreçleri ve bütçe planlamasında uzman danışmanlık.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon">🌿</div>
+          <h3 class="card__title">Peyzaj & Dış Mekan</h3>
+          <p class="card__text">Bahçe düzenleme, teras ve dış cephe tasarımıyla yaşam alanını dışarıya taşıyoruz.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Portföyümüz</p>
+        <h2 class="section__title">Öne Çıkan Projeler</h2>
+        <p class="section__sub">Tamamladığımız projelerden bir seçki.</p>
+      </div>
+
+      <div class="projects__filter" data-reveal>
+        <button class="filter__btn is-active" data-filter="all">Tümü</button>
+        <button class="filter__btn" data-filter="dekorasyon">Dekorasyon</button>
+        <button class="filter__btn" data-filter="konut">Konut</button>
+        <button class="filter__btn" data-filter="tadilat">Tadilat</button>
+      </div>
+
+      <div class="projects__grid">
+        <article class="project" data-category="dekorasyon" data-reveal>
+          <div class="project__img" style="--bg:url('resim/3.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Dekorasyon</span>
+            <h3 class="project__title">Salon Duvar Kaplama</h3>
+            <p class="project__text">Kartonpiyer çıtalı duvar paneli ve gizli aydınlatmalı modern salon.</p>
+          </div>
+        </article>
+        <article class="project" data-category="dekorasyon" data-reveal>
+          <div class="project__img" style="--bg:url('resim/4.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Dekorasyon</span>
+            <h3 class="project__title">Modern Çalışma Odası</h3>
+            <p class="project__text">Antrasit duvar panelleri ve balık sırtı parke ile şık çalışma alanı.</p>
+          </div>
+        </article>
+        <article class="project" data-category="konut" data-reveal>
+          <div class="project__img" style="--bg:url('resim/10.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Konut</span>
+            <h3 class="project__title">Hol & Ayna Detayı</h3>
+            <p class="project__text">Altın çerçeveli boy ayna ve aplik aydınlatmayla zarif giriş holü.</p>
+          </div>
+        </article>
+        <article class="project" data-category="konut" data-reveal>
+          <div class="project__img" style="--bg:url('resim/7.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Konut</span>
+            <h3 class="project__title">Koridor & Aydınlatma</h3>
+            <p class="project__text">Ahşap kapılar ve LED bant aydınlatmalı sıcak koridor tasarımı.</p>
+          </div>
+        </article>
+        <article class="project" data-category="tadilat" data-reveal>
+          <div class="project__img" style="--bg:url('resim/8.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Tadilat</span>
+            <h3 class="project__title">Banyo Yenileme</h3>
+            <p class="project__text">Mermer desenli seramik, cam duşakabin ve dekoratif tavanla komple banyo.</p>
+          </div>
+        </article>
+        <article class="project" data-category="tadilat" data-reveal>
+          <div class="project__img" style="--bg:url('resim/9.webp')"></div>
+          <div class="project__body">
+            <span class="project__tag">Tadilat</span>
+            <h3 class="project__title">Duvar Paneli Uygulaması</h3>
+            <p class="project__text">Şantiyede kartonpiyer ve duvar paneli montaj aşaması.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Nasıl Çalışıyoruz</p>
+        <h2 class="section__title">Çalışma Sürecimiz</h2>
+        <p class="section__sub">Şeffaf, planlı ve zamanında teslim eden bir süreç.</p>
+      </div>
+
+      <div class="process__steps">
+        <div class="step" data-reveal>
+          <span class="step__num">01</span>
+          <h3 class="step__title">Keşif & Görüşme</h3>
+          <p class="step__text">Mekanı yerinde inceler, ihtiyaç ve beklentilerinizi dinleriz.</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="step__num">02</span>
+          <h3 class="step__title">Tasarım & Teklif</h3>
+          <p class="step__text">Konsept, 3D görsel ve net bir bütçe planı sunarız.</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="step__num">03</span>
+          <h3 class="step__title">Uygulama</h3>
+          <p class="step__text">Uzman ekibimizle yüksek kalitede ve planlı şekilde uygularız.</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="step__num">04</span>
+          <h3 class="step__title">Teslim & Destek</h3>
+          <p class="step__text">Anahtar teslim sunar, sonrasında da yanınızda oluruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__media" data-reveal>
+        <div class="about__img"></div>
+        <div class="about__badge">
+          <strong>18+</strong>
+          <span>Yıllık Deneyim</span>
+        </div>
+      </div>
+      <div class="about__content" data-reveal>
+        <p class="section__eyebrow">Hakkımızda</p>
+        <h2 class="section__title">Detaylara değer veren bir ekip</h2>
+        <p class="about__text">
+          Akyol Yapı & Dekorasyon olarak, mimari hassasiyeti zanaatkar işçiliğiyle birleştiriyoruz.
+          Her projeye özgün bir hikaye olarak yaklaşır; fonksiyon, estetik ve dayanıklılığı
+          aynı potada eritiriz.
+        </p>
+        <ul class="about__list">
+          <li>Anahtar teslim, tek elden çözüm</li>
+          <li>Şeffaf bütçe ve zamanında teslim</li>
+          <li>Kaliteli malzeme ve usta işçiliği</li>
+          <li>Proje sonrası bakım ve destek</li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Bizimle Çalışın</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Referanslar</p>
+        <h2 class="section__title">Müşterilerimiz Ne Diyor?</h2>
+      </div>
+      <div class="testimonials__grid">
+        <blockquote class="quote" data-reveal>
+          <p>"Hayalini kurduğumuz evi tam zamanında ve kusursuz teslim ettiler. İletişimleri çok güçlü."</p>
+          <footer><strong>Elif K.</strong><span>Villa Sahibi</span></footer>
+        </blockquote>
+        <blockquote class="quote" data-reveal>
+          <p>"Ofisimizin renovasyonunda gösterdikleri özen ve hız beklentimizin çok ötesindeydi."</p>
+          <footer><strong>Mehmet A.</strong><span>İşletme Müdürü</span></footer>
+        </blockquote>
+        <blockquote class="quote" data-reveal>
+          <p>"Dekorasyon konusundaki vizyonları evimize bambaşka bir ruh kattı. Teşekkürler!"</p>
+          <footer><strong>Zeynep T.</strong><span>Ev Sahibi</span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info" data-reveal>
+        <p class="section__eyebrow">İletişim</p>
+        <h2 class="section__title">Projenizi konuşalım</h2>
+        <p class="contact__text">Ücretsiz keşif ve teklif için formu doldurun ya da bize doğrudan ulaşın.</p>
+        <ul class="contact__details">
+          <li><span>📍</span>Bafra/Samsun</li>
+          <li><span>📞</span><a href="tel:+905374135545">+90 537 413 55 45</a></li>
+          <li><span>✉️</span> erkanakyol5534@gmail.com</li>
+          <li><span>🕐</span> Pzt–Cmt: 09:00 – 18:00</li>
+        </ul>
+      </div>
+
+      <form class="contact__form" id="contactForm" data-reveal novalidate>
+        <div class="field">
+          <label for="name">Ad Soyad</label>
+          <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required />
+        </div>
+        <div class="field">
+          <label for="email">E-posta</label>
+          <input type="email" id="email" name="email" placeholder="ornek@mail.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX" />
+        </div>
+        <div class="field">
+          <label for="service">Hizmet</label>
+          <select id="service" name="service">
+            <option value="">Seçiniz</option>
+            <option>İnşaat & Yapı</option>
+            <option>İç Mimari</option>
+            <option>Dekorasyon</option>
+            <option>Tadilat & Renovasyon</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="message">Mesajınız</label>
+          <textarea id="message" name="message" rows="4" placeholder="Projenizden kısaca bahsedin..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Teklif İste</button>
+        <p class="form__status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="logo">
+          <span class="logo__mark">A</span>
+          <span class="logo__text">Akyol<strong>Yapı</strong></span>
+        </a>
+        <p>İnşaat, iç mimari ve dekorasyonda tek elden, anahtar teslim çözümler.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Hizmetler</h4>
+        <ul>
+          <li><a href="#services">İnşaat & Yapı</a></li>
+          <li><a href="#services">İç Mimari</a></li>
+          <li><a href="#services">Dekorasyon</a></li>
+          <li><a href="#services">Tadilat</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Kurumsal</h4>
+        <ul>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#projects">Projeler</a></li>
+          <li><a href="#process">Süreç</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Takip Et</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Akyol Yapı & Dekorasyon. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

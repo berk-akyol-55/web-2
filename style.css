@@ -531,3 +531,86 @@ h1, h2, h3, h4 { font-family: "Playfair Display", serif; font-weight: 600; line-
   .footer__inner { grid-template-columns: 1fr; gap: 30px; }
   .about__badge { right: 12px; }
 }
+/* --- HİZMETLER GALERİ BUTONU --- */
+.galeri-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --- GALERİ MODAL (AÇILIR PENCERE) CSS --- */
+.modal-arkaplan {
+  display: none; 
+  position: fixed; 
+  z-index: 99999; /* En üstte durması için */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-icerik {
+  position: relative;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-icerik img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.kapat-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: 0.3s;
+}
+
+.kapat-btn:hover { color: #d4af37; /* Tasarımınızın sarı tonuna uyumlu */ }
+
+.onceki, .sonraki {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 4px;
+}
+
+.onceki { left: -60px; }
+.sonraki { right: -60px; }
+
+.onceki:hover, .sonraki:hover {
+  background-color: #d4af37; /* Tasarımdaki gold rengi */
+}
+
+@media (max-width: 768px) {
+  .onceki { left: 0; border-radius: 0 4px 4px 0; }
+  .sonraki { right: 0; border-radius: 4px 0 0 4px; }
+  .kapat-btn { top: 10px; right: 20px; font-size: 40px; }
+}

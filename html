@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akyol Yapı - İnşaat, İç Mimari & Dekorasyon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasyon Menüsü -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-box">A</span>
+            <span class="logo-text">Akyol<strong>Yapı</strong></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#ana-sayfa">Ana Sayfa</a></li>
+            <li><a href="#hizmetler" class="active">Hizmetler</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#surec">Süreç</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+        <button class="cta-btn">Teklif Al</button>
+    </nav>
+
+    <!-- Hizmetler Bölümü -->
+    <section id="hizmetler" class="services-section">
+        <div class="container">
+            <div class="services-grid">
+                
+                <!-- Kart 1: Deko Tavan -->
+                <div class="card" data-category="deko-tavan" style="cursor: pointer;">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Deko Tavan</h3>
+                    <p>Konut, villa ve ticari yapılar için projelendirme, kaba ve ince yapı uygulamaları.</p>
+                </div>
+
+                <!-- Kart 2: Gergi Tavan -->
+                <div class="card" data-category="gergi-tavan" style="cursor: pointer;">
+                    <div class="card-icon">🛋️</div>
+                    <h3>Gergi Tavan</h3>
+                    <p>Fonksiyonel ve estetik iç mekan tasarımı, 3D görselleştirme ve konsept geliştirme.</p>
+                </div>
+
+                <!-- Kart 3: Gizli Işık & Asma Tavan -->
+                <div class="card" data-category="gizli-isik" style="cursor: pointer;">
+                    <div class="card-icon">🎨</div>
+                    <h3>Gizli Işık & Asma Tavan Modelleri</h3>
+                    <p>Mobilya, aydınlatma, tekstil ve aksesuar seçimiyle mekanınıza karakter katıyoruz.</p>
+                </div>
+
+                <!-- Kart 4: Duvar Paneli -->
+                <div class="card" data-category="duvar-paneli" style="cursor: pointer;">
+                    <div class="card-icon">🔨</div>
+                    <h3>Duvar Paneli</h3>
+                    <p>Ev ve ofislerde komple yenileme, mutfak-banyo tadilatı ve restorasyon işleri.</p>
+                </div>
+
+                <!-- Kart 5: Duvar Çıtası -->
+                <div class="card" data-category="duvar-citasi" style="cursor: pointer;">
+                    <div class="card-icon">📐</div>
+                    <h3>Duvar Çıtası</h3>
+                    <p>Mimari proje, ruhsat süreçleri ve bütçe planlamasında uzman danışmanlık.</p>
+                </div>
+
+                <!-- Kart 6: Kartonpier -->
+                <div class="card" data-category="kartonpier" style="cursor: pointer;">
+                    <div class="card-icon">🌿</div>
+                    <h3>Kartonpier</h3>
+                    <p>Bahçe düzenleme, teras ve dış cephe tasarımıyla yaşam alanını dışarıya taşıyoruz.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotoğraf Galerisi Açılır Penceresi (Modal) -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <h2 id="modalTitle">Hizmet Galerisi</h2>
+            <div id="galleryGrid" class="gallery-grid">
+                <!-- Fotoğraflar JavaScript ile buraya dinamik gelecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dosyamız -->
+    <script src="script.js"></script>
+</body>
+</html>

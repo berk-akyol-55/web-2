@@ -138,3 +138,73 @@
     });
   }
 })();
+// --- HİZMETLER GALERİ İŞLEVSİLLİĞİ ---
+
+const galeriResimleri = {
+  'deko-tavan': [
+    'resim/3.webp', 
+    'resim/4.webp'
+  ],
+  'gergi-tavan': [
+    'resim/7.webp',
+    'resim/8.webp'
+  ],
+  'gizli-isik': [
+    'resim/9.webp',
+    'resim/10.webp'
+  ],
+  'duvar-paneli': [
+    'resim/3.webp' // Kendi resimlerinizi buraya ekleyin
+  ],
+  'duvar-citasi': [
+    'resim/4.webp' // Kendi resimlerinizi buraya ekleyin
+  ],
+  'kartonpiyer': [
+    'resim/8.webp' // Kendi resimlerinizi buraya ekleyin
+  ]
+};
+
+let aktifKategori = '';
+let aktifResimIndeksi = 0;
+
+function galeriyiAc(kategori) {
+  aktifKategori = kategori;
+  aktifResimIndeksi = 0;
+  
+  const modal = document.getElementById('galeriModal');
+  const gosterilenResim = document.getElementById('gosterilenResim');
+  
+  if(galeriResimleri[kategori] && galeriResimleri[kategori].length > 0) {
+    gosterilenResim.src = galeriResimleri[kategori][aktifResimIndeksi];
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Arkaplanın kaymasını engeller
+  } else {
+    alert("Bu hizmete ait görseller yakında eklenecektir.");
+  }
+}
+
+function galeriyiKapat() {
+  document.getElementById('galeriModal').style.display = 'none';
+  document.body.style.overflow = 'auto'; // Arkaplan kaymasını geri açar
+}
+
+function resimDegistir(yon) {
+  const resimListesi = galeriResimleri[aktifKategori];
+  aktifResimIndeksi += yon;
+
+  if (aktifResimIndeksi >= resimListesi.length) {
+    aktifResimIndeksi = 0;
+  } else if (aktifResimIndeksi < 0) {
+    aktifResimIndeksi = resimListesi.length - 1;
+  }
+
+  document.getElementById('gosterilenResim').src = resimListesi[aktifResimIndeksi];
+}
+
+// Modal arkaplanına tıklanınca kapat
+window.onclick = function(event) {
+  const modal = document.getElementById('galeriModal');
+  if (event.target == modal) {
+    galeriyiKapat();
+  }
+}
